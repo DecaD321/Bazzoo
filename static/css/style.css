@@ -1,5 +1,22 @@
 body {
+    text-align: center;
     margin: 10%;
     margin-top: 30px;
-    font-family: 'IBM Plex Sans', sans-serif;
+    background-color:peachpuff;
+}
+h1 {
+    font-family: 'Zen Tokyo Zoo',cursive;
+    color: #8E6C88;
+    font-size: 10em;
+}
+p{
+    font-size: 2.5em;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+li { 
+    color: black;
+}
+a {
+ color : black;
+ text-emphasis:5;
 }
