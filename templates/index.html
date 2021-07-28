@@ -13,7 +13,7 @@
 <body>
     </br>
     <h1>Bazzoo</h1>
-    <p>Clothing just for you!</p>
+    <p1>Clothing just for you!</p1>
     </br>
 
 
@@ -86,11 +86,11 @@
     <h2>Catalog</h2>
     <div class="container">
         <div class="row">
-            {% for imgurl in urllist %}
+            {% for detail in details %}
             <div class="card" style="width: 10rem;">
-                <img src="{{ imgurl }}" class="card-img-top" alt="...">
+                <img src='{{ detail["url"] }}' class="card-img-top" alt="...">
                 <div class="card-body">
-                    <p class="card-text"> Sale Price: {{ price }} </p>
+                    <p2 class="card-text"> Sale Price: {{ detail["price"] }} </p2>
                 </div>
             </div>
             {% endfor %}
