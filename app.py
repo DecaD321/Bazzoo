@@ -2,7 +2,7 @@
 # -- Import section --
 from flask import Flask, render_template, request
 from datetime import datetime
-from model import getClothingDetails
+from model import getClothingWomenDetails
 import os
 
 # -- Initialization section --
@@ -14,7 +14,11 @@ app = Flask(__name__)
 @app.route('/')
 @app.route('/index')
 def index():
-    details = getClothingDetails()
+    details = getClothingWomenDetails()
     # urllist = getClothingUrl()
     # print(urllist)
     return render_template("index.html", time = datetime.now(), details =details)
+
+@app.route('/men')
+def men():
+    return render_template("men.html")
