@@ -50,11 +50,12 @@ def getClothingMen1():
     datalength = len(response["CatalogProducts"])
 
     data = []
-
-    for data in range(datalength):
-        temp_data = {"url": response["CatalogProducts"][data]["DefaultProductImage"], "price": response["CatalogProducts"][data]["ListPrice"] , "title" :response["CatalogProducts"][data]["DisplayName"]}
-        if temp_data["price"] < 10 :
-            data.append(temp_data)
+    for item in range(datalength):
+        temp_item = {"url": response["CatalogProducts"][item]["DefaultProductImage"], "price": response["CatalogProducts"][item]["ListPrice"] , "title" :response["CatalogProducts"][item]["DisplayName"]}
+        if temp_item["price"] < 10 :
+            data.append(temp_item)
+    print("This is a test")
+    print(data) 
     return data
 
 def getClothingWomen1():

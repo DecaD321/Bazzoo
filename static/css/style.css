@@ -20,9 +20,9 @@ a {
  color : black;
  text-emphasis:5;
 }
-nav{
-    text-align: center;
-font-size: 2rem;
+.navbar{
+    text-align: justify;
+    font-size: 2rem;
     font-family: 'Caveat', cursive;
 }
 

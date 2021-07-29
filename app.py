@@ -2,8 +2,7 @@
 # -- Import section --
 from flask import Flask, render_template, request
 from datetime import datetime
-from model import getClothingWomenDetails, getClothingWomen1, getClothingWomen2,getClothingWomen3, getClothingMen1, getClothingMen2,getClothingMen3 
-import os
+from model import getClothingWomenDetails, getClothingWomen1, getClothingWomen2,getClothingWomen3, getClothingMen1
 
 # -- Initialization section --
 app = Flask(__name__)
@@ -21,13 +20,13 @@ def index():
 
 @app.route('/men')
 def men():
-    
-    return render_template("men.html")
+    data = getClothingMen1()
+    return render_template("men.html", data = data)
 
-# @app.route('/women')
-# def women():
-#     details = getClothingWomenDetails()
-#     return render_template("women.html", details =details)
+@app.route('/women')
+def women():
+    details = getClothingWomenDetails()
+    return render_template("women.html", details =details)
 
 @app.route('/women$')
 def women1():
@@ -46,15 +45,15 @@ def women3():
 
 @app.route('/men$')
 def men1():
-    details = getClothingMen1()
-    return render_template("men$.html", details =details)
+    data = getClothingMen1()
+    return render_template("men$.html", data =data)
 
-@app.route('/men$$')
-def men2():
-    details = getClothingMen2()
-    return render_template("men$$.html", details =details)
+# @app.route('/men$$')
+# def men2():
+#     data = getClothingMen2()
+#     return render_template("men$$.html", data = data)
 
-@app.route('/men$$$')
-def men3():
-    details = getClothingMen3()
-    return render_template("men$$$.html", details =details)
+# @app.route('/men$$$')
+# def men3():
+#     data = getClothingMen3()
+#     return render_template("men$$$.html", data = data)

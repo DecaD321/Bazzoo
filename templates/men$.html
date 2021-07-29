@@ -1,15 +1,14 @@
 <html>
 
 <head>
-    <title>Welcome!</title>
+    <title>
+        Men's Section
+    </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="../static/css/style.css" type="text/css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
-    </style>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
     </style>
 </head>
 
@@ -20,7 +19,7 @@
     </br>
 
 
-    <nav class="navbar navbar-expand-lg navbar-light" style="width: 200rem;"">
+    <nav class="navbar navbar-expand-lg navbar-light mx-auto" style="width: 200rem;"">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Navbar</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -31,7 +30,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/index">Home</a>
+                        <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="/women" id="navbarDropdown" role="button"
@@ -57,7 +56,7 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="/men$">$</a></li>
-                            <li><a class="dropdown-item" href="/men">$$</a></li>
+                            <li><a class="dropdown-item" href="/men$$">$$</a></li>
                             <!-- <li>
                                 <hr class="dropdown-divider">
                             </li> -->
@@ -97,14 +96,15 @@
                 <img src='{{ detail["url"] }}' class="card-img-top" alt="...">
                 <div class="card-body">
                     <p2 class="card-text"> 
-                        {{ detail["title"] }}
+                        {{ data["title"] }}
 
-                        Sale Price: {{ detail["price"] }} </p2>
+                        Sale Price: {{ data["price"] }} </p2>
                 </div>
             </div>
             {% endfor %}
         </div>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
         crossorigin="anonymous"></script>
